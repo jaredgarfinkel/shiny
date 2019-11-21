@@ -55,7 +55,9 @@ Column {data-width=650}
 ### Chart A
 
 ```{r}
-
+renderPrint({ 
+  input[["boro_choice"]]
+})
 ```
 
 Column {data-width=350}

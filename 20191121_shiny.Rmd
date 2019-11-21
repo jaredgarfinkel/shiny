@@ -47,6 +47,14 @@ sliderInput(
   "price_range", 
   label = h3("Choose price range"), 
   min = min_price, max = max_price, value = c(100, 400))
+
+room_choice = nyc_airbnb %>% distinct(room_type) %>% pull()
+
+# radioButtons widget
+radioButtons(
+  "room_choice", 
+  label = h3("Choose room type"),
+  choices = room_choice, selected = "Entire home/apt")
 ```
 
 Column {data-width=650}

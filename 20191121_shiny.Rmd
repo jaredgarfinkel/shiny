@@ -38,6 +38,15 @@ selectInput(
   "boro_choice", 
   label = h3("Select boro"),
   choices = boros, selected = "Manhattan")
+
+max_price = 1000
+min_price = nyc_airbnb %>% distinct(price) %>% min()
+  
+# sliderInput widget
+sliderInput(
+  "price_range", 
+  label = h3("Choose price range"), 
+  min = min_price, max = max_price, value = c(100, 400))
 ```
 
 Column {data-width=650}
